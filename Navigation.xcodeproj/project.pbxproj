@@ -30,6 +30,8 @@
 		280B8E7A25D83B2300A798FD /* InfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B8E7825D83B2300A798FD /* InfoCoordinator.swift */; };
 		280B8E8225D8421B00A798FD /* PhotosCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B8E8125D8421B00A798FD /* PhotosCoordinator.swift */; };
 		280B8E8325D8421B00A798FD /* PhotosCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280B8E8125D8421B00A798FD /* PhotosCoordinator.swift */; };
+		280ED8FF26F7A8BA00E02C64 /* LocalAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280ED8FE26F7A8BA00E02C64 /* LocalAuthorizationService.swift */; };
+		280ED90026F7A8BA00E02C64 /* LocalAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280ED8FE26F7A8BA00E02C64 /* LocalAuthorizationService.swift */; };
 		281F130C258A153E0035822E /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281F130B258A153E0035822E /* PhotosTableViewCell.swift */; };
 		281F130F258A15940035822E /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281F130E258A15940035822E /* PhotosCollectionViewCell.swift */; };
 		284AE2F125B0C49E00027E09 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782B5250CE27700A87020 /* FeedViewController.swift */; };
@@ -83,6 +85,7 @@
 		280B8E7325D8386300A798FD /* PostCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCoordinator.swift; sourceTree = "<group>"; };
 		280B8E7825D83B2300A798FD /* InfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinator.swift; sourceTree = "<group>"; };
 		280B8E8125D8421B00A798FD /* PhotosCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCoordinator.swift; sourceTree = "<group>"; };
+		280ED8FE26F7A8BA00E02C64 /* LocalAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthorizationService.swift; sourceTree = "<group>"; };
 		281F130B258A153E0035822E /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		281F130E258A15940035822E /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		284AE30B25B0C49E00027E09 /* Navigation copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Navigation copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +176,7 @@
 				281F130E258A15940035822E /* PhotosCollectionViewCell.swift */,
 				2886D4C826D95EE000E66C20 /* LocalNotificationsService.swift */,
 				288D6C3A257299720039E5EF /* LogInViewController.swift */,
+				280ED8FE26F7A8BA00E02C64 /* LocalAuthorizationService.swift */,
 				280B8E8125D8421B00A798FD /* PhotosCoordinator.swift */,
 				28CAD533257B77BC005F72DE /* Post.swift */,
 				28CAD537257B7AB1005F72DE /* ProfileTableHederView.swift */,
@@ -288,6 +292,7 @@
 				2886D4C926D95EE000E66C20 /* LocalNotificationsService.swift in Sources */,
 				280B8E5625D8015F00A798FD /* Coordinator.swift in Sources */,
 				280B8E6A25D81D4800A798FD /* MainCoordinator.swift in Sources */,
+				280ED8FF26F7A8BA00E02C64 /* LocalAuthorizationService.swift in Sources */,
 				280594F625ACD16A00F5100A /* MyTabBarController.swift in Sources */,
 				281F130C258A153E0035822E /* PhotosTableViewCell.swift in Sources */,
 				060782B2250CE27700A87020 /* AppDelegate.swift in Sources */,
@@ -321,6 +326,7 @@
 				2886D4CA26D95EE000E66C20 /* LocalNotificationsService.swift in Sources */,
 				280B8E5725D8015F00A798FD /* Coordinator.swift in Sources */,
 				280B8E6B25D81D4800A798FD /* MainCoordinator.swift in Sources */,
+				280ED90026F7A8BA00E02C64 /* LocalAuthorizationService.swift in Sources */,
 				284AE2F525B0C49E00027E09 /* MyTabBarController.swift in Sources */,
 				284AE2F625B0C49E00027E09 /* PhotosTableViewCell.swift in Sources */,
 				284AE2F725B0C49E00027E09 /* AppDelegate.swift in Sources */,

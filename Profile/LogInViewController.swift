@@ -35,6 +35,7 @@ class LogInViewController: UIViewController {
         contentView.addSubview(loginTextField)
         contentView.addSubview(passwordTextField)
         contentView.addSubview(logInButton)
+        contentView.addSubview(biometricAuthButton)
         
         NSLayoutConstraint.activate([
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -70,7 +71,12 @@ class LogInViewController: UIViewController {
             logInButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             logInButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: basePadding),
             logInButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            logInButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            
+            biometricAuthButton.heightAnchor.constraint(equalToConstant: 100),
+            biometricAuthButton.widthAnchor.constraint(equalToConstant: 100),
+            biometricAuthButton.topAnchor.constraint(equalTo: logInButton.bottomAnchor, constant: 50),
+            biometricAuthButton.centerXAnchor.constraint(equalTo: logInButton.centerXAnchor),
+            biometricAuthButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
     
@@ -178,9 +184,37 @@ class LogInViewController: UIViewController {
         return logInButton
     }()
     
+    private lazy var biometricAuthButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .lightGray
+        button.setTitle("Biometric \nAuth", for: .normal)
+        button.titleLabel?.lineBreakMode = .byWordWrapping
+        button.titleLabel?.textAlignment = .center
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = false
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(biometricAuthButtonPressed), for: .allTouchEvents)
+        button.isUserInteractionEnabled = true
+        button.toAutoLayout()
+        return button
+    }()
+    
     @objc func logInButtonPressed() {
         print("Log in button pressed")
         delegate?.onLogInPressed()
+    }
+    
+    @objc func biometricAuthButtonPressed() {
+        print("Нажали кнопку биометрической авторизации")
+        LocalAuthorizationService().authorizeIfPossible { [self] result in
+            if result {
+                print("Биометрическая авторизация успешна")
+                delegate?.onLogInPressed()
+            } else {
+                print("Биометрическая авторизация не успешна")
+            }
+        }
     }
 }
 
