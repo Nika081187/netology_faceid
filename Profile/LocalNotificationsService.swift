@@ -29,7 +29,7 @@ class LocalNotificationsService: NSObject {
 
             UNUserNotificationCenter.current().getNotificationSettings { (settings) in
                 if settings.authorizationStatus != UNAuthorizationStatus.authorized {
-                    print("Не авторизованы")
+                    print("Уведомления: не авторизованы")
                 }
             }
 
